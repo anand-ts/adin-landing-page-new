@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import FoundersHero from "@/components/founders/FoundersHero";
+import FundraisingEngine from "@/components/founders/FundraisingEngine";
+import FoundersFAQ from "@/components/founders/FoundersFAQ";
+import FoundersCTA from "@/components/founders/FoundersCTA";
 
 export const metadata: Metadata = {
   title: "Founders - ADIN",
@@ -25,6 +28,15 @@ export default function FoundersPage() {
 
         {/* Hero Section */}
         <FoundersHero />
+
+        {/* Fundraising Engine */}
+        <FundraisingEngine />
+
+        {/* FAQ */}
+        <FoundersFAQ />
+
+        {/* CTA */}
+        <FoundersCTA />
 
         {/* Scroll Indicator */}
         <div className="flex justify-center pb-8">
