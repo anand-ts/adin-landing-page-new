@@ -1,41 +1,40 @@
 import { Metadata } from "next";
+import MembersHero from "@/components/members/MembersHero";
 
 export const metadata: Metadata = {
   title: "Members - ADIN",
-  description: "Join the ADIN community of investors, operators, and founders shaping the future of technology.",
+  description: "Submit Deals, Earn Carry. Members earn a 10% carry on deals they submit that ADIN approves and successfully closes.",
 };
 
 export default function MembersPage() {
   return (
-    <main className="relative">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 gradient-bg opacity-90" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
+    <main className="relative min-h-screen">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 gradient-bg opacity-30" />
+      
+      {/* Main Content */}
+      <div className="relative z-10">
+        {/* Breadcrumb */}
+        <div className="pt-24 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <span className="inline-block px-4 py-2 bg-gray-100 text-gray-600 text-sm rounded-full">
               Members
-            </h1>
-            <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-              Join our global network of 1,2302 humans sharing insights and knowledge 
-              as investors, operators, and industry experts.
-            </p>
+            </span>
           </div>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
-            <p className="text-gray-600 text-lg">
-              This page is under development. Please check back soon for information 
-              about joining our community and member benefits.
-            </p>
+        {/* Hero Section */}
+        <MembersHero />
+
+        {/* Scroll Indicator */}
+        <div className="flex justify-center pb-8">
+          <div className="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center animate-bounce">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
