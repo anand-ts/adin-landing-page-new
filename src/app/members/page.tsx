@@ -1,5 +1,10 @@
 import { Metadata } from "next";
 import MembersHero from "@/components/members/MembersHero";
+import MemberStats from "@/components/members/MemberStats";
+import BeMoreThanMember from "@/components/members/BeMoreThanMember";
+import HowToEarn from "@/components/members/HowToEarn";
+import MembersFAQ from "@/components/members/MembersFAQ";
+import MembersCTA from "@/components/members/MembersCTA";
 
 export const metadata: Metadata = {
   title: "Members - ADIN",
@@ -25,6 +30,21 @@ export default function MembersPage() {
 
         {/* Hero Section */}
         <MembersHero />
+
+        {/* Member Stats */}
+        <MemberStats />
+
+        {/* Be More Than a Member */}
+        <BeMoreThanMember />
+
+        {/* How to Earn */}
+        <HowToEarn />
+
+        {/* FAQ */}
+        <MembersFAQ />
+
+        {/* CTA */}
+        <MembersCTA />
 
         {/* Scroll Indicator */}
         <div className="flex justify-center pb-8">
