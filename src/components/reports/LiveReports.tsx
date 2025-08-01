@@ -3,7 +3,7 @@ import { PORTFOLIO_COMPANIES } from '@/lib/constants'
 
 const LiveReports = () => {
   return (
-    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
+    <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden xl:block">
       <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/20 min-w-[280px]">
         {/* Header */}
         <div className="flex items-center space-x-2 mb-4">
