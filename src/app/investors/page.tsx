@@ -1,6 +1,10 @@
 import { Metadata } from "next";
 import InvestorHero from "@/components/investors/InvestorHero";
 import VotingInterface from "@/components/investors/VotingInterface";
+import BeMoreThanInvestor from "@/components/investors/BeMoreThanInvestor";
+import MachineIntelligence from "@/components/investors/MachineIntelligence";
+import FAQSection from "@/components/sections/FAQSection";
+import InvestorCTA from "@/components/investors/InvestorCTA";
 
 export const metadata: Metadata = {
   title: "Investors - ADIN",
@@ -48,6 +52,12 @@ export default function InvestorsPage() {
           </div>
         </div>
       </div>
+
+      {/* Additional Sections */}
+      <BeMoreThanInvestor />
+      <MachineIntelligence />
+      <FAQSection />
+      <InvestorCTA />
     </main>
   );
 }
