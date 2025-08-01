@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { NAV_ITEMS } from '@/lib/constants'
 
 const Header = () => {
   return (
@@ -21,30 +22,15 @@ const Header = () => {
 
           {/* Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link 
-              href="/about" 
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              About
-            </Link>
-            <Link 
-              href="/investors" 
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              Investors
-            </Link>
-            <Link 
-              href="/members" 
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              Members
-            </Link>
-            <Link 
-              href="/founders" 
-              className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
-            >
-              Founders
-            </Link>
+            {NAV_ITEMS.map((item) => (
+              <Link 
+                key={item.href}
+                href={item.href} 
+                className="text-sm font-medium text-foreground/70 hover:text-primary transition-colors"
+              >
+                {item.title}
+              </Link>
+            ))}
           </nav>
 
           {/* Auth Buttons */}

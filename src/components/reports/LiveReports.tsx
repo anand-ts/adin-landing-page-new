@@ -1,24 +1,7 @@
 import CompanyCard from './CompanyCard'
+import { PORTFOLIO_COMPANIES } from '@/lib/constants'
 
 const LiveReports = () => {
-  const companies = [
-    {
-      name: "New Range",
-      description: "Automate Compliance",
-      logo: "/adin-logo-56x56.webp" // placeholder, replace with actual logos
-    },
-    {
-      name: "Cactos", 
-      description: "Fintech Systems",
-      logo: "/adin-logo-56x56.webp" // placeholder
-    },
-    {
-      name: "OpenAI",
-      description: "Machine Intelligence", 
-      logo: "/adin-logo-56x56.webp" // placeholder
-    }
-  ]
-
   return (
     <div className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
       <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/20 min-w-[280px]">
@@ -30,7 +13,7 @@ const LiveReports = () => {
 
         {/* Company Cards */}
         <div className="space-y-3">
-          {companies.map((company, index) => (
+          {PORTFOLIO_COMPANIES.slice(0, 3).map((company, index) => (
             <CompanyCard 
               key={company.name}
               name={company.name}

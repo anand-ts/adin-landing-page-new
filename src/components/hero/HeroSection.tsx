@@ -11,15 +11,16 @@ const HeroSection = () => {
         <div className="text-center">
           {/* Main Heading */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
-            <span className="text-white/20 block">Investing in early</span>
-            <span className="text-white/20 block">stage ideas building for</span>
-            <span className="text-white/20 inline">creative tools, </span>
-            <span className="text-white/20 inline">blockchain, </span>
-            <span className="inline bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent font-extrabold">
-              biotech
-            </span>
-            <span className="text-white/20 inline">, </span>
-            <span className="text-white/20 inline">creative tools, and</span>
+            <span className="text-white/30 block">Investing in early</span>
+            <span className="text-white/30 block">stage ideas building for</span>
+            <div className="block">
+              <span className="text-white/30">creative tools, </span>
+              <span className="text-white/30">blockchain, </span>
+              <span className="inline bg-gradient-to-r from-purple-300 to-blue-300 bg-clip-text text-transparent font-extrabold">
+                biotech
+              </span>
+              <span className="text-white/30">.</span>
+            </div>
           </h1>
 
           {/* Subtitle */}
