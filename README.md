@@ -1,24 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Adin.online Landing Page
 
-## Getting Started
+A modern, responsive landing page for adin.online built with Next.js, TypeScript, and Tailwind CSS.
 
-First, run the development server:
+## 🚀 Tech Stack
 
+- **Next.js 15** - React framework with App Router
+- **TypeScript** - Type-safe development
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **ESLint** - Code linting and formatting
+
+## 🏁 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, pnpm, or bun
+
+### Development
+
+1. Install dependencies:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Run the development server:
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Open [http://localhost:3000](http://localhost:3000) to view the app
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The page auto-updates as you edit files in the `src/` directory.
+
+## 📁 Project Structure
+
+```
+src/
+├── app/              # App Router pages and layouts
+│   ├── layout.tsx    # Root layout
+│   ├── page.tsx      # Homepage
+│   └── globals.css   # Global styles
+├── components/       # Reusable components
+└── lib/             # Utilities and configurations
+```
+
+## 🎨 Design System
+
+- **Responsive Design** - Mobile-first approach
+- **Accessibility** - WCAG 2.1 AA compliance
+- **Performance** - Optimized images and Core Web Vitals
+- **Modern UI** - Clean, contemporary design with smooth animations
 
 ## Learn More
 
