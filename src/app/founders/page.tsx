@@ -1,41 +1,40 @@
 import { Metadata } from "next";
+import FoundersHero from "@/components/founders/FoundersHero";
 
 export const metadata: Metadata = {
   title: "Founders - ADIN",
-  description: "Resources and opportunities for founders seeking early-stage funding from ADIN.",
+  description: "Raise Smarter. Get Backed by the Network. Members earn a 10% carry on deals they submit that ADIN approves and successfully closes.",
 };
 
 export default function FoundersPage() {
   return (
-    <main className="relative">
-      {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 gradient-bg opacity-90" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-6 text-white">
+    <main className="relative min-h-screen">
+      {/* Gradient Background */}
+      <div className="absolute inset-0 gradient-bg opacity-30" />
+      
+      {/* Main Content */}
+      <div className="relative z-10">
+        {/* Breadcrumb */}
+        <div className="pt-24 pb-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            <span className="inline-block px-4 py-2 bg-gray-100 text-gray-600 text-sm rounded-full">
               Founders
-            </h1>
-            <p className="text-white/90 text-lg md:text-xl max-w-3xl mx-auto">
-              Building the future of the internet? We back teams with bold ideas 
-              in biotech, creative tools, and blockchain technologies.
-            </p>
+            </span>
           </div>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center">
-            <h2 className="text-3xl font-bold mb-8">Coming Soon</h2>
-            <p className="text-gray-600 text-lg">
-              This page is under development. Please check back soon for information 
-              about our application process and founder resources.
-            </p>
+        {/* Hero Section */}
+        <FoundersHero />
+
+        {/* Scroll Indicator */}
+        <div className="flex justify-center pb-8">
+          <div className="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center animate-bounce">
+            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
           </div>
         </div>
-      </section>
+      </div>
     </main>
   );
 }
