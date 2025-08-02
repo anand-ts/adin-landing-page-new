@@ -5,7 +5,7 @@ import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
-import CTASection from "@/components/sections/CTASection";
+import UnifiedCTA from "@/components/shared/UnifiedCTA";
 
 export const metadata: Metadata = {
   title: "About ADIN - AI-Powered Venture Capital",
@@ -32,7 +32,7 @@ export default function AboutPage() {
       <UnifiedFAQ />
       
       {/* CTA Section */}
-      <CTASection />
+      <UnifiedCTA />
       
       {/* Live Reports Card - Floating Bottom Right */}
       <LiveReportsCard />

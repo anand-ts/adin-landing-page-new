@@ -4,7 +4,7 @@ import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
-import CTASection from "@/components/sections/CTASection";
+import UnifiedCTA from "@/components/shared/UnifiedCTA";
 
 export default function Home() {
   return (
@@ -28,7 +28,7 @@ export default function Home() {
       <UnifiedFAQ />
       
       {/* CTA Section */}
-      <CTASection />
+      <UnifiedCTA />
     </main>
   );
 }

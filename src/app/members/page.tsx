@@ -5,7 +5,7 @@ import BeMoreThanMember from "@/components/members/BeMoreThanMember";
 import HowToEarn from "@/components/members/HowToEarn";
 import HowToEarnCarry from "@/components/members/HowToEarnCarry";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
-import MembersCTA from "@/components/members/MembersCTA";
+import UnifiedCTA from "@/components/shared/UnifiedCTA";
 
 export const metadata: Metadata = {
   title: "Members - ADIN",
@@ -80,7 +80,7 @@ export default function MembersPage() {
         <UnifiedFAQ />
 
         {/* CTA */}
-        <MembersCTA />
+        <UnifiedCTA />
 
         {/* Scroll Indicator */}
         <div className="flex justify-center pb-8">

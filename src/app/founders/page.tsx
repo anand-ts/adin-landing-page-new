@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import FoundersHero from "@/components/founders/FoundersHero";
 import FundraisingEngine from "@/components/founders/FundraisingEngine";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
-import FoundersCTA from "@/components/founders/FoundersCTA";
+import UnifiedCTA from "@/components/shared/UnifiedCTA";
 
 export const metadata: Metadata = {
   title: "Founders - ADIN",
@@ -68,7 +68,7 @@ export default function FoundersPage() {
         <UnifiedFAQ />
 
         {/* CTA */}
-        <FoundersCTA />
+        <UnifiedCTA />
 
         {/* Scroll Indicator */}
         <div className="flex justify-center pb-8">

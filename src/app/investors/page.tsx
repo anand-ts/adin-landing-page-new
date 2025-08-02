@@ -6,7 +6,7 @@ import InvestorHero from "@/components/investors/InvestorHero";
 import BeMoreThanInvestor from "@/components/investors/BeMoreThanInvestor";
 import MachineIntelligence from "@/components/investors/MachineIntelligence";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
-import InvestorCTA from "@/components/investors/InvestorCTA";
+import UnifiedCTA from "@/components/shared/UnifiedCTA";
 import { motion } from "framer-motion";
 
 export default function InvestorsPage() {
@@ -119,7 +119,7 @@ export default function InvestorsPage() {
       <BeMoreThanInvestor />
       <MachineIntelligence />
       <UnifiedFAQ />
-      <InvestorCTA />
+      <UnifiedCTA />
     </main>
   );
 }
