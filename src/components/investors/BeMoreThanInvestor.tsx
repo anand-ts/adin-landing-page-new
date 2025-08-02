@@ -1,237 +1,215 @@
 'use client'
 
-import { useState } from 'react'
-import { IoThumbsUpOutline, IoThumbsDownOutline, IoMailOutline, IoFolderOutline, IoTimeOutline } from 'react-icons/io5'
-import { motion } from 'framer-motion'
+import { IoStatsChartOutline, IoDocumentTextOutline, IoClipboardOutline, IoFolderOutline, IoTimeOutline, IoPersonOutline } from 'react-icons/io5'
 
 const BeMoreThanInvestor = () => {
-  const [email, setEmail] = useState('')
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-purple-50 via-blue-50 to-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-2 gap-16">
+        <div className="grid lg:grid-cols-2 gap-20 items-start">
           {/* Left Column */}
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Be more than an <span className="text-orange-500">investor</span>.
-              <br />
-              Be a power player.
-            </h2>
-            <p className="text-gray-600 text-lg mb-12">
-              Accelerate your decision-making. Execute cornerstone investment opportunities.
-            </p>
+          <div className="space-y-16">
+            {/* Main Heading */}
+            <div className="text-center lg:text-left">
+              <h2 className="text-4xl lg:text-5xl font-bold mb-8">
+                Be more than an <span className="text-orange-400">Investor</span>.
+                <br />
+                Be a power player.
+              </h2>
+              <p className="text-gray-600 text-lg leading-relaxed">
+                Accelerate your decision-making. Execute borderless investment opportunities.
+              </p>
+            </div>
 
             {/* Real-Time Voting */}
-            <div className="mb-8">
-              <h3 className="font-semibold mb-4">Real-Time voting.</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Voice your opinion and share with transparent,
-                <br />
-                data-driven community decisions.
-              </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Real-Time voting.</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Make investment decisions faster with transparent,
+                  <br />
+                  community-driven voting.
+                </p>
+              </div>
               
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">S</span>
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-10 h-10 bg-black rounded-full flex items-center justify-center text-white font-medium">
+                    L
                   </div>
-                  <span className="text-sm">Scribe</span>
-                  <span className="text-xs text-gray-500">Market analysis and insights</span>
+                  <div>
+                    <div className="font-medium">Lane AI</div>
+                    <div className="text-sm text-gray-500">What&apos;s your take on this investment in Lane AI?</div>
+                  </div>
                 </div>
                 
-                <div className="bg-gray-100 rounded-lg p-3 text-sm text-gray-600">
-                  My take
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <input type="radio" id="for" name="vote" className="text-green-500" />
+                    <label htmlFor="for" className="text-sm font-medium">For</label>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <input type="radio" id="against" name="vote" />
+                    <label htmlFor="against" className="text-sm font-medium">Against</label>
+                  </div>
+                  <div className="flex items-center space-x-3">
+                    <input type="radio" id="abstain" name="vote" />
+                    <label htmlFor="abstain" className="text-sm font-medium">Abstain</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Submit a deal */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Submit a deal, earn 10% carry.</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Refer promising companies with just a link or deck. ADIN handles the rest.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-2xl p-6 border border-gray-200 shadow-sm">
+                <div className="space-y-4">
+                  <input
+                    type="text"
+                    placeholder="lane-ai"
+                    className="w-full px-4 py-3 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                  />
+                  <button className="bg-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-purple-700 transition-colors">
+                    Submit
+                  </button>
                 </div>
                 
-                <div className="flex space-x-2">
-                  <button className="px-3 py-1 bg-gray-100 rounded text-sm flex items-center space-x-1">
-                    <IoThumbsUpOutline className="w-4 h-4" />
-                    <span>Agreed</span>
-                  </button>
-                  <button className="px-3 py-1 bg-gray-100 rounded text-sm flex items-center space-x-1">
-                    <IoThumbsDownOutline className="w-4 h-4" />
-                    <span>Dissent</span>
-                  </button>
+                <div className="mt-6 text-xs text-gray-500">
+                  Ask me anything about this
+                </div>
+                
+                <div className="flex space-x-6 text-xs text-gray-400 mt-4">
+                  <span className="flex items-center space-x-1">
+                    <IoStatsChartOutline className="w-3 h-3" />
+                    <span>Detailed</span>
+                  </span>
+                  <span className="flex items-center space-x-1">
+                    <IoDocumentTextOutline className="w-3 h-3" />
+                    <span>Memo</span>
+                  </span>
+                  <span className="flex items-center space-x-1">
+                    <IoClipboardOutline className="w-3 h-3" />
+                    <span>Pitch</span>
+                  </span>
+                  <span className="flex items-center space-x-1">
+                    <IoFolderOutline className="w-3 h-3" />
+                    <span>Google Docs</span>
+                  </span>
                 </div>
               </div>
             </div>
 
             {/* Expansive due diligence */}
-            <div className="mb-8">
-              <h3 className="font-semibold mb-4">Expansive due diligence.</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                ADIN&apos;s agents build risk reports, technical
-                <br />
-                feasibility, and competitive landscaping, ensuring
-                <br />
-                quality and informed decision-making.
-              </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Expansive due diligence.</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  ADIN&apos;s agents sweat the details. Technical,
+                  <br />
+                  business, and beyond and in just 10 minutes.
+                </p>
+              </div>
               
-              <div className="space-y-2">
-                <div className="text-sm">Financial, Technical, and Business Analysis</div>
-                <div className="flex items-center text-xs text-gray-500">
-                  <span>⏱</span>
-                  <span className="ml-1">4s under time of 5.9 Minutes</span>
+              <div className="bg-white rounded-xl p-6 border border-gray-200">
+                <div className="text-sm font-medium mb-3">Current Phase</div>
+                <div className="text-xs text-gray-500 mb-4">Product, Technical, and Business Analysis</div>
+                <div className="flex items-center text-xs text-gray-400">
+                  <IoTimeOutline className="w-4 h-4 mr-2" />
+                  <span>1 live round takes up to 10 minutes</span>
                 </div>
               </div>
             </div>
 
-            {/* We handle the backend */}
+            {/* Deal Closes */}
             <div>
-              <h3 className="font-semibold mb-4">We handle the backend.</h3>
-              <p className="text-gray-600 text-sm">
-                Focus on deal-making. Leave all the leg work
+              <h3 className="text-xl font-semibold mb-4">Deal Closes</h3>
+              <p className="text-gray-600 leading-relaxed">
+                We handle the backend.
                 <br />
-                management to ADIN and its agents
+                Diligence, deal structuring, check writing, and updates
                 <br />
-                as sourced by Tribute Labs.
+                all covered by Tribute Labs.
               </p>
             </div>
           </div>
 
-          {/* Right Column - Forms and Features */}
-          <div>
-            {/* CSS Analytics Dashboard */}
-            <motion.div
-              className="relative mb-8"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-            >
-              <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
-                {/* Header */}
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="font-semibold">Deal Analytics</h4>
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* Analytics Cards */}
-                <div className="space-y-3">
-                  <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium">Success Rate</span>
-                      <span className="text-lg font-bold text-green-600">87%</span>
+          {/* Right Column - Inbox and Deals */}
+          <div className="space-y-16">
+            {/* Deals hit your inbox */}
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-4">Deals hit your inbox.</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  Stay in the loop with real-time deal alerts, term sheets, and wins.
+                </p>
+              </div>
+              
+              <div className="bg-gradient-to-br from-orange-100 to-purple-100 rounded-2xl p-8">
+                <div className="space-y-4">{/* Email notifications */}
+                  {/* Email notifications */}
+                  <div className="bg-white rounded-xl p-4 flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <IoPersonOutline className="w-4 h-4 text-white" />
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
-                      <div className="bg-green-500 h-2 rounded-full w-[87%]"></div>
+                    <div className="flex-1">
+                      <div className="font-medium text-sm">ADIN</div>
+                      <div className="text-xs text-gray-600">We&apos;re in for Axiom!</div>
+                      <div className="text-xs text-gray-500">We closed a $500K investment in Axiom Series A.</div>
                     </div>
                   </div>
                   
-                  <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-3">
-                    <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium">ROI</span>
-                      <span className="text-lg font-bold text-orange-600">3.2x</span>
+                  <div className="bg-white rounded-xl p-4 flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <IoPersonOutline className="w-4 h-4 text-white" />
                     </div>
-                    <div className="grid grid-cols-4 gap-1 mt-2">
-                      <div className="bg-orange-400 h-2 rounded"></div>
-                      <div className="bg-orange-300 h-2 rounded"></div>
-                      <div className="bg-orange-200 h-2 rounded"></div>
-                      <div className="bg-gray-200 h-2 rounded"></div>
+                    <div className="flex-1">
+                      <div className="font-medium text-sm">ADIN</div>
+                      <div className="text-xs text-gray-600">Boom. Hello Porto.</div>
+                      <div className="text-xs text-gray-500">Great investments like this require high-</div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-white rounded-xl p-4 flex items-center space-x-3">
+                    <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                      <IoPersonOutline className="w-4 h-4 text-white" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="font-medium text-sm">ADIN</div>
+                      <div className="text-xs text-gray-600">And another one!</div>
+                      <div className="text-xs text-gray-500">We&apos;re going home those wins in Binni.</div>
                     </div>
                   </div>
                 </div>
               </div>
-              {/* LED Overlay Effect */}
-              <div className="absolute inset-0 border-2 border-orange-400 rounded-2xl shadow-lg shadow-orange-400/30 pointer-events-none"></div>
-            </motion.div>
+            </div>
 
-            {/* Submit a deal form */}
-            <div className="bg-gray-50 rounded-xl p-6 mb-8">
-              <h3 className="font-semibold mb-4">Submit a deal, with 50% carry</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Everything connected with one carry at deals. 50% carry going directly.
-              </p>
-              
+            {/* Deal Pipeline */}
+            <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-sm">
+              <h4 className="font-semibold mb-6 text-lg">Active Pipeline</h4>
               <div className="space-y-4">
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="deal info"
-                  className="w-full px-4 py-2 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                />
-                
-                <div className="flex items-center space-x-2">
-                  <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm">
-                    Submit
-                  </button>
-                </div>
-                
-                <div className="flex space-x-4 text-xs text-gray-500">
-                  <span>✓ Venture</span>
-                  <span>✓ Veto</span>
-                  <span>✓ Exit</span>
-                  <span>✓ Preferred</span>
-                </div>
+                {[
+                  { name: 'Wiring $150,000', status: 'Complete', color: 'green' },
+                  { name: 'Cactus Counter Signs', status: 'Complete', color: 'green' },
+                  { name: 'TL Signs Terms Sheet', status: 'Complete', color: 'green' },
+                  { name: 'Terms Sheet Reviewed', status: 'Complete', color: 'green' },
+                  { name: 'Alignment Call', status: 'Complete', color: 'green' }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center justify-between py-2">
+                    <span className="text-sm font-medium">{item.name}</span>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-xs text-gray-500 font-medium">{item.status}</span>
+                      <div className={`w-3 h-3 rounded-full ${item.color === 'green' ? 'bg-green-500' : 'bg-gray-300'}`}></div>
+                    </div>
+                  </div>
+                ))}
               </div>
-            </div>
-
-            {/* Deals hit your inbox */}
-            <div className="mb-8">
-              <h3 className="font-semibold mb-4">Deals hit your inbox.</h3>
-              <p className="text-gray-600 text-sm mb-4">
-                Stay in the loop with real-time alerts, term sheets, and live
-                <br />
-                updates on your investments.
-              </p>
-              
-              <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
-                <div className="flex items-center justify-between text-sm">
-                  <div className="flex items-center space-x-2">
-                    <IoMailOutline className="w-4 h-4 text-gray-600" />
-                    <IoFolderOutline className="w-4 h-4 text-gray-600" />
-                    <IoTimeOutline className="w-4 h-4 text-gray-600" />
-                  </div>
-                  <span className="text-gray-500">Wed Jun 19 8</span>
-                </div>
-              </div>
-            </div>
-
-            {/* ADIN sections with progress bars */}
-            <div className="space-y-4">
-              {[
-                { name: 'ADIN', role: 'Deal for AI agents', progress: 100 },
-                { name: 'ADIN', role: 'Machine Systems', progress: 85 },
-                { name: 'ADIN', role: 'Intelligence Development', progress: 92 }
-              ].map((item, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <div className="w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center text-sm font-bold">
-                    A
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-sm font-medium">{item.name}</div>
-                    <div className="text-xs text-gray-500">{item.role}</div>
-                  </div>
-                  <div className="w-16 h-2 bg-gray-200 rounded-full">
-                    <div 
-                      className="h-2 bg-green-500 rounded-full" 
-                      style={{ width: `${item.progress}%` }}
-                    />
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            {/* Additional features list */}
-            <div className="mt-8 space-y-2">
-              {[
-                'Voting and Q&A',
-                'Active Capital Raise',
-                'Venture',
-                'TL SpaceX Term Sheet',
-                'Terms Shared Document',
-                'Paperwork Left'
-              ].map((feature, index) => (
-                <div key={index} className="flex items-center justify-between text-sm">
-                  <span>{feature}</span>
-                  <div className="w-2 h-2 bg-green-500 rounded-full" />
-                </div>
-              ))}
             </div>
           </div>
         </div>

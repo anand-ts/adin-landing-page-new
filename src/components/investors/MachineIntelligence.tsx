@@ -1,6 +1,6 @@
 const MachineIntelligence = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -14,107 +14,111 @@ const MachineIntelligence = () => {
           </p>
         </div>
 
-        {/* Colorful dots visualization */}
-        <div className="flex justify-center mb-16">
-          <div className="grid grid-cols-5 gap-4">
-            {/* Row 1 */}
-            <div className="w-16 h-16 bg-green-400 rounded-full"></div>
-            <div className="w-16 h-16 bg-orange-400 rounded-full"></div>
-            <div className="w-16 h-16 bg-red-400 rounded-full"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            
-            {/* Row 2 */}
-            <div className="w-16 h-16 bg-purple-500 rounded-full"></div>
-            <div className="w-16 h-16 bg-orange-500 rounded-full"></div>
-            <div className="w-16 h-16 bg-red-500 rounded-full"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            
-            {/* Row 3 */}
-            <div className="w-16 h-16 bg-green-500 rounded-full"></div>
-            <div className="w-16 h-16 bg-purple-400 rounded-full"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-            <div className="w-16 h-16 bg-transparent"></div>
-          </div>
-        </div>
-
         {/* Two column content */}
         <div className="grid lg:grid-cols-2 gap-16">
           {/* Left Column - Private Network */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Private Network</h3>
-            <h4 className="text-lg font-semibold mb-4">Access a hand-picked investor network.</h4>
-            <p className="text-gray-600 mb-8">
-              Our network is a collection of our vetted investors on
-              <br />
-              the collective. With 700+ members and growing.
-            </p>
-
-            {/* AI Agents List */}
-            <div className="bg-green-100 rounded-2xl p-6">
-              <h5 className="font-semibold mb-4">An LLM built for venture-grade signal.</h5>
-              <p className="text-sm text-gray-600 mb-6">
-                Our custom training systems to leverage, compare, and read
-                <br />
-                bias feeding any hyper-linear and event-info grounded in
-                <br />
-                financial datasets.
+          <div className="bg-white rounded-3xl p-8 shadow-sm">
+            <div className="mb-8">
+              <h3 className="text-sm font-medium text-gray-500 mb-2">Private Network</h3>
+              <h4 className="text-2xl font-bold mb-4">Access a hand-picked investor network.</h4>
+              <p className="text-gray-600">
+                Share insights and collaborate with other ADIN investors on emerging tech and trends.
               </p>
-              
+            </div>
+
+            {/* Investor Network Avatars */}
+            <div className="flex justify-center mb-8">
+              <div className="relative">
+                {/* Top row */}
+                <div className="flex space-x-4 mb-4 justify-center">
+                  <div className="w-12 h-12 bg-green-400 rounded-full"></div>
+                  <div className="w-12 h-12 bg-orange-400 rounded-full"></div>
+                  <div className="w-12 h-12 bg-red-400 rounded-full"></div>
+                  <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                </div>
+                
+                {/* Middle row */}
+                <div className="flex space-x-4 mb-4 justify-center">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full"></div>
+                  <div className="w-12 h-12 bg-orange-500 rounded-full"></div>
+                  <div className="w-12 h-12 bg-red-500 rounded-full"></div>
+                  <div className="w-12 h-12 bg-green-400 rounded-full"></div>
+                </div>
+                
+                {/* Bottom row */}
+                <div className="flex space-x-4 justify-center">
+                  <div className="w-12 h-12 bg-green-500 rounded-full"></div>
+                  <div className="w-12 h-12 bg-purple-400 rounded-full"></div>
+                  <div className="w-12 h-12 bg-orange-400 rounded-full"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* AI LLM Section */}
+            <div className="mb-6">
+              <h4 className="text-sm font-medium text-gray-500 mb-2">AI Investor</h4>
+              <h5 className="text-xl font-bold mb-4">An LLM built for venture-grade signal.</h5>
+              <p className="text-gray-600 text-sm mb-6">
+                ADIN&apos;s AI uncovers patterns in founders, markets, and deal flow helping you invest faster and smarter, grounded in data.
+              </p>
+            </div>
+            
+            {/* AI Agents Cards */}
+            <div className="bg-gradient-to-br from-green-100 to-green-200 rounded-2xl p-6">
               <div className="space-y-3">
                 {[
                   { name: 'The Network Hunter', color: 'bg-green-500' },
                   { name: 'The Tech Oracle', color: 'bg-orange-500' },
                   { name: 'The Monopoly Maker', color: 'bg-red-500' },
-                  { name: 'The Unit Master', color: 'bg-blue-500' },
-                  { name: 'The Value Guy', color: 'bg-purple-500' }
+                  { name: 'The Unit Master', color: 'bg-purple-500' },
+                  { name: 'The Value Guy', color: 'bg-orange-600' }
                 ].map((agent, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className={`w-4 h-4 ${agent.color} rounded-full`}></div>
-                    <span className="text-sm font-medium">{agent.name}</span>
+                  <div key={index} className="bg-white rounded-lg px-4 py-3 flex items-center space-x-3 shadow-sm">
+                    <div className={`w-3 h-3 ${agent.color} rounded-full`}></div>
+                    <span className="text-sm font-medium text-gray-800">{agent.name}</span>
                   </div>
                 ))}
               </div>
             </div>
           </div>
 
-          {/* Right Column - Collective Edge */}
-          <div>
-            <h3 className="text-xl font-bold mb-4">Collective Edge</h3>
-            <h4 className="text-lg font-semibold mb-4">Tap into the collective edge.</h4>
-            <p className="text-gray-600 mb-8">
-              Our key ADIN human network markets about best live
-              <br />
-              founders, operators, and scouts you aren&apos;t, find anywhere
-              <br />
-              else.
-            </p>
+          {/* Right Column - Deal Flow */}
+          <div className="bg-white rounded-3xl p-8 shadow-sm">
+            <div className="mb-8">
+              <h3 className="text-sm font-medium text-gray-500 mb-2">Deal Flow</h3>
+              <h4 className="text-2xl font-bold mb-4">Tap into the collective edge.</h4>
+              <p className="text-gray-600">
+                The ADIN Member network surfaces deals from top founders, operators, and scouts you won&apos;t find anywhere else.
+              </p>
+            </div>
 
-            {/* Voting Interface */}
-            <div className="bg-orange-100 rounded-2xl p-6">
-              <div className="bg-black rounded-lg p-4 text-white relative">
-                <div className="flex items-center space-x-2 mb-4">
-                  <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-bold">V</span>
+            {/* Deal Card with Voting Interface */}
+            <div className="bg-gradient-to-br from-orange-100 to-yellow-100 rounded-2xl p-6">
+              <div className="bg-gray-900 rounded-2xl p-6 text-white relative overflow-hidden">
+                {/* Lane AI Logo/Image placeholder */}
+                <div className="absolute top-4 right-4 w-16 h-16 bg-gray-700 rounded-lg flex items-center justify-center">
+                  <div className="w-8 h-8 bg-blue-500 rounded"></div>
+                </div>
+                
+                <div className="mb-4">
+                  <div className="flex items-center space-x-2 mb-2">
+                    <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
+                      <span className="text-black text-xs font-bold">L</span>
+                    </div>
+                    <span className="font-semibold">Lane AI</span>
                   </div>
-                  <span className="text-sm">Voting AI</span>
-                </div>
-                
-                <div className="text-xs text-gray-300 mb-3">
-                  Is it early enough?
-                </div>
-                
-                <div className="bg-gray-800 rounded p-2 text-xs mb-3">
-                  Pre
-                </div>
-                
-                <div className="flex justify-between items-center text-xs">
-                  <span>99%</span>
-                  <div className="bg-yellow-400 text-black px-2 py-1 rounded text-xs font-bold">
-                    ✓
+                  
+                  <p className="text-sm text-gray-300 mb-4">
+                    AI-native tools that take teams from recruiting and onboarding insights to day-to-day grind management, all in one.
+                  </p>
+                  
+                  <div className="flex items-center space-x-2 mb-4">
+                    <span className="text-2xl font-bold">99%</span>
                   </div>
+                </div>
+                
+                <div className="bg-blue-500 text-white px-4 py-2 rounded-lg text-sm font-medium inline-block">
+                  320 x 356 Hug
                 </div>
               </div>
             </div>

@@ -79,33 +79,85 @@ export default function InvestorsPage() {
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
                 >
-                  {/* CSS Investment Dashboard */}
+                  {/* Voting Interface Dashboard */}
                   <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
-                    {/* Header */}
-                    <div className="flex items-center justify-between mb-6">
-                      <h3 className="font-semibold text-lg">Investment Dashboard</h3>
-                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                    {/* Header with Lane AI Progress */}
+                    <div className="relative bg-gray-800 rounded-xl p-4 mb-6 text-white">
+                      <div className="flex items-center justify-between mb-2">
+                        <div className="bg-yellow-400 text-black text-xs px-2 py-1 rounded font-medium">
+                          100%
+                        </div>
+                        <button className="text-gray-300 hover:text-white transition-colors">
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
+                      </div>
+                      <div className="flex items-center space-x-3">
+                        <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white font-medium text-sm">
+                          L
+                        </div>
+                        <div>
+                          <h3 className="font-medium">Lane AI</h3>
+                          <p className="text-gray-300 text-sm">Machine Learning</p>
+                        </div>
+                      </div>
                     </div>
                     
-                    {/* Chart Area */}
-                    <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-4 mb-4">
-                      <div className="grid grid-cols-3 gap-4 mb-4">
-                        <div className="bg-blue-500 h-16 rounded opacity-80"></div>
-                        <div className="bg-purple-500 h-20 rounded opacity-70"></div>
-                        <div className="bg-pink-500 h-12 rounded opacity-60"></div>
+                    {/* Voting Options */}
+                    <div className="space-y-3">
+                      {/* Scribe - For */}
+                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                            S
+                          </div>
+                          <span className="font-medium text-gray-900">Scribe</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600">For</span>
+                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-sm text-gray-600 text-center">Portfolio Performance</div>
-                    </div>
-                    
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-4">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-green-600">$2.4M</div>
-                        <div className="text-xs text-gray-500">Total Invested</div>
+
+                      {/* Lane AI - For */}
+                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
+                            L
+                          </div>
+                          <span className="font-medium text-gray-900">Lane AI</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600">For</span>
+                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold text-blue-600">12</div>
-                        <div className="text-xs text-gray-500">Active Deals</div>
+
+                      {/* Sona - Against */}
+                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
+                        <div className="flex items-center space-x-3">
+                          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-medium text-sm">
+                            S
+                          </div>
+                          <span className="font-medium text-gray-900">Sona</span>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <span className="text-sm text-gray-600">Against</span>
+                          <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
