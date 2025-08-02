@@ -40,9 +40,9 @@ const VotingInterface = () => {
       {/* Frame 1012 Image */}
       <motion.div
         className="relative"
-        initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
         <div className="relative overflow-hidden rounded-2xl">
           <Image
@@ -60,9 +60,9 @@ const VotingInterface = () => {
       {/* Voting Interface */}
       <motion.div 
         className="bg-black rounded-2xl p-6 text-white relative overflow-hidden max-w-md"
-        initial={{ opacity: 0, y: 30, scale: 0.95, filter: "blur(6px)" }}
-        animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
-        transition={{ duration: 1.1, delay: 0.7, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.4, ease: "easeInOut" }}
       >
       {/* Background gradient accent */}
       <div className="absolute top-4 right-4 bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded">

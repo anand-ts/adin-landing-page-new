@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import HeroSection from "@/components/hero/HeroSection";
-import LiveReports from "@/components/reports/LiveReports";
+import LiveReportsCard from "@/components/reports/LiveReportsCard";
 import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
@@ -19,9 +19,6 @@ export default function AboutPage() {
       {/* Hero Section */}
       <HeroSection />
       
-      {/* Live Reports Sidebar */}
-      <LiveReports />
-      
       {/* Network Stats */}
       <NetworkStats />
       
@@ -36,6 +33,9 @@ export default function AboutPage() {
       
       {/* CTA Section */}
       <CTASection />
+      
+      {/* Live Reports Card - Floating Bottom Right */}
+      <LiveReportsCard />
     </main>
   );
 }

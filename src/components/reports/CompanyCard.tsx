@@ -46,7 +46,7 @@ const CompanyCard = ({ name, description, logo, delay = 0 }: CompanyCardProps) =
         <motion.div 
           className="w-2 h-2 bg-green-500 rounded-full"
           animate={{ opacity: [1, 0.3, 1] }}
-          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: delay * 0.5 }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         />
       </div>
     </motion.div>
