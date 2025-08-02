@@ -31,11 +31,7 @@ const HowToEarn = () => {
           {/* Slider */}
           <div className="mb-12">
             <div className="relative">
-              <div className="h-2 bg-gradient-to-r from-purple-200 to-orange-200 rounded-full">
-                <div className="absolute top-1/2 transform -translate-y-1/2 right-1/4">
-                  <div className="w-6 h-6 bg-purple-500 rounded-full border-4 border-white shadow-lg"></div>
-                </div>
-              </div>
+              <div className="h-2 bg-gradient-to-r from-purple-200 to-orange-200 rounded-full"></div>
               <div className="flex justify-between text-xs text-gray-500 mt-2">
                 <span>$1M</span>
                 <span>$50M</span>
