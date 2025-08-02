@@ -66,11 +66,11 @@ export default function MembersPage() {
         {/* Member Stats */}
         <MemberStats />
 
+        {/* Become an ADIN Member - Deal Calculator */}
+        <HowToEarn />
+
         {/* Be More Than a Member */}
         <BeMoreThanMember />
-
-        {/* How to Earn */}
-        <HowToEarn />
 
         {/* FAQ */}
         <MembersFAQ />
