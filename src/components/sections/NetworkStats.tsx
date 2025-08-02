@@ -21,16 +21,16 @@ const NetworkStats = () => {
         >
           <motion.p 
             className="text-xl md:text-2xl text-gray-600 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+            animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 30, filter: "blur(6px)" }}
+            transition={{ duration: 1.0, delay: 0.3, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
           >
             ADIN is a global network of{" "}
             <motion.span 
               className="font-bold text-gray-900 text-2xl md:text-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(4px)" }}
+              transition={{ duration: 1.1, delay: 0.6, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
             >
               1,2302 humans
             </motion.span>
@@ -43,9 +43,9 @@ const NetworkStats = () => {
           {/* Progress dots */}
           <motion.div 
             className="flex justify-center items-center space-x-2 mt-8"
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 25, filter: "blur(4px)" }}
+            animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 25, filter: "blur(4px)" }}
+            transition={{ duration: 1.0, delay: 0.9, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.6 } }}
           >
             <motion.div 
               className="w-3 h-3 bg-primary rounded-full"

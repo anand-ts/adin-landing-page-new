@@ -10,8 +10,8 @@ interface PageTransitionProps {
 const pageVariants = {
   initial: {
     opacity: 0,
-    y: 20,
-    scale: 0.98
+    y: 10,
+    scale: 0.99
   },
   in: {
     opacity: 1,
@@ -20,15 +20,15 @@ const pageVariants = {
   },
   out: {
     opacity: 0,
-    y: -20,
-    scale: 1.02
+    y: -10,
+    scale: 1.01
   }
 }
 
 const pageTransition = {
   type: 'tween' as const,
-  ease: 'anticipate' as const,
-  duration: 0.4
+  ease: [0.25, 0.1, 0.25, 1] as const, // Custom cubic-bezier for smoother easing
+  duration: 0.6
 }
 
 const PageTransition = ({ children }: PageTransitionProps) => {

@@ -13,31 +13,31 @@ const HeroSection = () => {
           {/* Main Heading */}
           <motion.h1 
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
           >
             <motion.span 
               className="text-gray-900 block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.0, delay: 0.3, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
             >
               Investing in early
             </motion.span>
             <motion.span 
               className="text-gray-900 block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.0, delay: 0.6, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
             >
               stage ideas building for
             </motion.span>
             <motion.div 
               className="block"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.0, delay: 0.9, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
             >
               <AnimatedText />
               <span className="text-gray-900">.</span>
@@ -47,9 +47,9 @@ const HeroSection = () => {
           {/* Subtitle */}
           <motion.p 
             className="text-gray-600 text-xl md:text-2xl max-w-3xl mx-auto mb-10 leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 30, filter: "blur(4px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 1.1, delay: 1.2, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
           >
             ADIN backs teams building the future of the internet
             <br />
@@ -58,9 +58,9 @@ const HeroSection = () => {
 
           {/* CTA Button */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 30, scale: 0.9, filter: "blur(6px)" }}
+            animate={{ opacity: 1, y: 0, scale: 1, filter: "blur(0px)" }}
+            transition={{ duration: 1.2, delay: 1.5, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
           >
             <VideoButton />
           </motion.div>

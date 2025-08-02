@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { IoThumbsUpOutline, IoThumbsDownOutline, IoMailOutline, IoFolderOutline, IoTimeOutline } from 'react-icons/io5'
+import { motion } from 'framer-motion'
 
 const BeMoreThanInvestor = () => {
   const [email, setEmail] = useState('')
@@ -32,11 +33,11 @@ const BeMoreThanInvestor = () => {
               
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs">L</span>
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs">S</span>
                   </div>
-                  <span className="text-sm">Lane AI</span>
-                  <span className="text-xs text-gray-500">How&apos;s your rate in angel? Late 50%</span>
+                  <span className="text-sm">Scribe</span>
+                  <span className="text-xs text-gray-500">Market analysis and insights</span>
                 </div>
                 
                 <div className="bg-gray-100 rounded-lg p-3 text-sm text-gray-600">
@@ -91,6 +92,54 @@ const BeMoreThanInvestor = () => {
 
           {/* Right Column - Forms and Features */}
           <div>
+            {/* CSS Analytics Dashboard */}
+            <motion.div
+              className="relative mb-8"
+              initial={{ opacity: 0, y: 30, filter: "blur(8px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 1.2, delay: 0.3, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
+            >
+              <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
+                {/* Header */}
+                <div className="flex items-center justify-between mb-4">
+                  <h4 className="font-semibold">Deal Analytics</h4>
+                  <div className="flex space-x-1">
+                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
+                  </div>
+                </div>
+                
+                {/* Analytics Cards */}
+                <div className="space-y-3">
+                  <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-lg p-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium">Success Rate</span>
+                      <span className="text-lg font-bold text-green-600">87%</span>
+                    </div>
+                    <div className="w-full bg-gray-200 rounded-full h-2 mt-2">
+                      <div className="bg-green-500 h-2 rounded-full w-[87%]"></div>
+                    </div>
+                  </div>
+                  
+                  <div className="bg-gradient-to-r from-orange-50 to-red-50 rounded-lg p-3">
+                    <div className="flex justify-between items-center">
+                      <span className="text-sm font-medium">ROI</span>
+                      <span className="text-lg font-bold text-orange-600">3.2x</span>
+                    </div>
+                    <div className="grid grid-cols-4 gap-1 mt-2">
+                      <div className="bg-orange-400 h-2 rounded"></div>
+                      <div className="bg-orange-300 h-2 rounded"></div>
+                      <div className="bg-orange-200 h-2 rounded"></div>
+                      <div className="bg-gray-200 h-2 rounded"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              {/* LED Overlay Effect */}
+              <div className="absolute inset-0 border-2 border-orange-400 rounded-2xl shadow-lg shadow-orange-400/30 pointer-events-none"></div>
+            </motion.div>
+
             {/* Submit a deal form */}
             <div className="bg-gray-50 rounded-xl p-6 mb-8">
               <h3 className="font-semibold mb-4">Submit a deal, with 50% carry</h3>

@@ -10,7 +10,7 @@ const LoadingBar = () => {
 
   useEffect(() => {
     setIsLoading(true)
-    const timer = setTimeout(() => setIsLoading(false), 400)
+    const timer = setTimeout(() => setIsLoading(false), 600)
     return () => clearTimeout(timer)
   }, [pathname])
 
@@ -22,7 +22,7 @@ const LoadingBar = () => {
       initial={{ scaleX: 0, transformOrigin: "left" }}
       animate={{ scaleX: 1 }}
       exit={{ scaleX: 0, transformOrigin: "right" }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      transition={{ duration: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
     />
   )
 }

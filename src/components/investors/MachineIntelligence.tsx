@@ -1,6 +1,6 @@
 const MachineIntelligence = () => {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-16">
@@ -97,9 +97,9 @@ const MachineIntelligence = () => {
               <div className="bg-black rounded-lg p-4 text-white relative">
                 <div className="flex items-center space-x-2 mb-4">
                   <div className="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                    <span className="text-black text-xs font-bold">L</span>
+                    <span className="text-black text-xs font-bold">V</span>
                   </div>
-                  <span className="text-sm">Lane AI</span>
+                  <span className="text-sm">Voting AI</span>
                 </div>
                 
                 <div className="text-xs text-gray-300 mb-3">

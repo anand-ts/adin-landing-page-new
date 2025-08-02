@@ -50,15 +50,15 @@ const AISpeedSection = () => {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - AI Agents */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+            animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 40, filter: "blur(8px)" }}
+            transition={{ duration: 1.0, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
           >
             <motion.h2 
               className="text-4xl lg:text-5xl font-bold mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
+              initial={{ opacity: 0, y: 30, filter: "blur(6px)" }}
+              animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 30, filter: "blur(6px)" }}
+              transition={{ duration: 1.2, delay: 0.2, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
             >
               AI speed.
               <br />
@@ -67,9 +67,9 @@ const AISpeedSection = () => {
             
             <motion.p 
               className="text-gray-600 mb-8 text-lg"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.2 }}
+              initial={{ opacity: 0, y: 25, filter: "blur(4px)" }}
+              animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 25, filter: "blur(4px)" }}
+              transition={{ duration: 1.0, delay: 0.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
             >
               ADIN pairs expert operators with intelligent agents to handle the heavy lifting of venture workflows. Faster 
               analysis, tighter feedback loops, and more space for high-conviction bets.
@@ -78,9 +78,9 @@ const AISpeedSection = () => {
             {/* Powered by AI Agents */}
             <motion.div 
               className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30, scale: 0.95, filter: "blur(6px)" }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" } : { opacity: 0, y: 30, scale: 0.95, filter: "blur(6px)" }}
+              transition={{ duration: 1.1, delay: 0.6, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
             >
               <div className="flex items-center space-x-3 mb-6">
                 <Image
@@ -101,9 +101,9 @@ const AISpeedSection = () => {
                   <motion.div 
                     key={agent.name} 
                     className="flex items-center space-x-4 group"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                    transition={{ duration: 0.8, delay: 0.4 + index * 0.1, ease: "easeOut" }}
+                    initial={{ opacity: 0, x: -20, filter: "blur(4px)" }}
+                    animate={inView ? { opacity: 1, x: 0, filter: "blur(0px)" } : { opacity: 0, x: -20, filter: "blur(4px)" }}
+                    transition={{ duration: 1.0, delay: 0.8 + index * 0.15, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.6 } }}
                   >
                     <div 
                       className={`w-10 h-10 ${agent.color} rounded-lg flex items-center justify-center text-gray-700 transition-colors duration-300`}
@@ -122,9 +122,9 @@ const AISpeedSection = () => {
             {/* Tribute Labs Project */}
             <motion.div 
               className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 30, scale: 0.95, filter: "blur(6px)" }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" } : { opacity: 0, y: 30, scale: 0.95, filter: "blur(6px)" }}
+              transition={{ duration: 1.2, delay: 1.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
             >
               <div className="flex items-start space-x-4">
                 <div className="w-10 h-10 bg-pink-500 rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
@@ -144,15 +144,15 @@ const AISpeedSection = () => {
 
           {/* Right Column - Human Support */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-            transition={{ duration: 0.4, delay: 0.2 }}
+            initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
+            animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 40, filter: "blur(8px)" }}
+            transition={{ duration: 1.1, delay: 0.3, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.8 } }}
           >
             <motion.div 
               className="mb-8"
-              initial={{ opacity: 0 }}
-              animate={inView ? { opacity: 1 } : { opacity: 0 }}
-              transition={{ duration: 0.3, delay: 0.4 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(4px)" }}
+              animate={inView ? { opacity: 1, y: 0, filter: "blur(0px)" } : { opacity: 0, y: 20, filter: "blur(4px)" }}
+              transition={{ duration: 1.0, delay: 0.5, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
             >
               <h3 className="text-sm font-semibold text-gray-900 mb-4">Supported by</h3>
               <h4 className="text-xl font-bold mb-6">Humans</h4>
@@ -161,9 +161,9 @@ const AISpeedSection = () => {
             {/* Team Member Card with Enhanced LED Effect */}
             <motion.div 
               className="relative"
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+              initial={{ opacity: 0, y: 40, scale: 0.9, filter: "blur(10px)" }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1, filter: "blur(0px)" } : { opacity: 0, y: 40, scale: 0.9, filter: "blur(10px)" }}
+              transition={{ duration: 1.4, delay: 0.7, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 1.0 } }}
             >
               {/* Enhanced LED Ribbon Effect */}
               <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 p-8 text-center shadow-sm border border-gray-200">
@@ -203,9 +203,9 @@ const AISpeedSection = () => {
                     </div>
                     <motion.div 
                       className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm shadow-lg"
-                      initial={{ opacity: 0 }}
-                      animate={inView ? { opacity: 1 } : { opacity: 0 }}
-                      transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                      initial={{ opacity: 0, scale: 0, filter: "blur(4px)" }}
+                      animate={inView ? { opacity: 1, scale: 1, filter: "blur(0px)" } : { opacity: 0, scale: 0, filter: "blur(4px)" }}
+                      transition={{ duration: 1.0, delay: 1.5, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.6 } }}
                     >
                       ✓
                     </motion.div>

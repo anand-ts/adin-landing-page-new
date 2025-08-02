@@ -8,17 +8,17 @@ const LiveReports = () => {
   return (
     <motion.div 
       className="fixed right-6 top-1/2 -translate-y-1/2 z-40 hidden xl:block"
-      initial={{ opacity: 0, x: 50 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.8, delay: 1.0, ease: "easeOut" }}
+      initial={{ opacity: 0, x: 60, filter: "blur(8px)" }}
+      animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
+      transition={{ duration: 1.2, delay: 1.2, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
     >
       <div className="bg-white/95 backdrop-blur-md rounded-2xl p-6 shadow-xl border border-white/20 min-w-[280px]">
         {/* Header */}
         <motion.div 
           className="flex items-center space-x-2 mb-4"
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1.2, ease: "easeOut" }}
+          initial={{ opacity: 0, y: 15, filter: "blur(4px)" }}
+          animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+          transition={{ duration: 1.0, delay: 1.5, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.7 } }}
         >
           <motion.div 
             className="w-2 h-2 bg-green-500 rounded-full"
@@ -36,7 +36,7 @@ const LiveReports = () => {
               name={company.name}
               description={company.description}
               logo={company.logo}
-              delay={1.4 + index * 0.1}
+              delay={1.7 + index * 0.2}
             />
           ))}
         </div>
