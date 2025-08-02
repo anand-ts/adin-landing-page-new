@@ -4,7 +4,7 @@ import MemberStats from "@/components/members/MemberStats";
 import BeMoreThanMember from "@/components/members/BeMoreThanMember";
 import HowToEarn from "@/components/members/HowToEarn";
 import HowToEarnCarry from "@/components/members/HowToEarnCarry";
-import MembersFAQ from "@/components/members/MembersFAQ";
+import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import MembersCTA from "@/components/members/MembersCTA";
 
 export const metadata: Metadata = {
@@ -77,7 +77,7 @@ export default function MembersPage() {
         <HowToEarnCarry />
 
         {/* FAQ */}
-        <MembersFAQ />
+        <UnifiedFAQ />
 
         {/* CTA */}
         <MembersCTA />

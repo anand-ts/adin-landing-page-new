@@ -5,7 +5,7 @@ import Image from 'next/image';
 import InvestorHero from "@/components/investors/InvestorHero";
 import BeMoreThanInvestor from "@/components/investors/BeMoreThanInvestor";
 import MachineIntelligence from "@/components/investors/MachineIntelligence";
-import FAQSection from "@/components/sections/FAQSection";
+import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import InvestorCTA from "@/components/investors/InvestorCTA";
 import { motion } from "framer-motion";
 
@@ -118,7 +118,7 @@ export default function InvestorsPage() {
       {/* Additional Sections */}
       <BeMoreThanInvestor />
       <MachineIntelligence />
-      <FAQSection />
+      <UnifiedFAQ />
       <InvestorCTA />
     </main>
   );

@@ -3,7 +3,7 @@ import LiveReports from "@/components/reports/LiveReports";
 import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
-import FAQSection from "@/components/sections/FAQSection";
+import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import CTASection from "@/components/sections/CTASection";
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       <InvestmentPhilosophy />
       
       {/* FAQ Section */}
-      <FAQSection />
+      <UnifiedFAQ />
       
       {/* CTA Section */}
       <CTASection />

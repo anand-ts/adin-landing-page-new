@@ -4,7 +4,7 @@ import LiveReportsCard from "@/components/reports/LiveReportsCard";
 import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
-import FAQSection from "@/components/sections/FAQSection";
+import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import CTASection from "@/components/sections/CTASection";
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ export default function AboutPage() {
       <InvestmentPhilosophy />
       
       {/* FAQ Section */}
-      <FAQSection />
+      <UnifiedFAQ />
       
       {/* CTA Section */}
       <CTASection />

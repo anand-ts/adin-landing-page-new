@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import FoundersHero from "@/components/founders/FoundersHero";
 import FundraisingEngine from "@/components/founders/FundraisingEngine";
-import FoundersFAQ from "@/components/founders/FoundersFAQ";
+import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import FoundersCTA from "@/components/founders/FoundersCTA";
 
 export const metadata: Metadata = {
@@ -65,7 +65,7 @@ export default function FoundersPage() {
         <FundraisingEngine />
 
         {/* FAQ */}
-        <FoundersFAQ />
+        <UnifiedFAQ />
 
         {/* CTA */}
         <FoundersCTA />
