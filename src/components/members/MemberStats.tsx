@@ -15,7 +15,7 @@ interface AnimatedCounterProps {
 const AnimatedCounter = ({ end, suffix = '', prefix = '', duration = 2000, className = '', continuous = false, incrementRate = 5000 }: AnimatedCounterProps) => {
   const [count, setCount] = useState<string>('0')
   const [hasStarted, setHasStarted] = useState(false)
-  const [currentValue, setCurrentValue] = useState(end)
+  const currentValueRef = useRef(end)
   const countRef = useRef(null)
 
   useEffect(() => {
@@ -33,12 +33,12 @@ const AnimatedCounter = ({ end, suffix = '', prefix = '', duration = 2000, class
             
             // Easing function for smooth animation
             const easeOut = 1 - Math.pow(1 - progress, 3)
-            const currentValue = startValue + (end - startValue) * easeOut
+            const animatedValue = startValue + (end - startValue) * easeOut
             
             // Format number based on whether it's a decimal
             const displayValue = end % 1 === 0 
-              ? Math.floor(currentValue).toLocaleString()
-              : currentValue.toFixed(1)
+              ? Math.floor(animatedValue).toLocaleString()
+              : animatedValue.toFixed(1)
             
             setCount(displayValue)
             
@@ -65,12 +65,10 @@ const AnimatedCounter = ({ end, suffix = '', prefix = '', duration = 2000, class
     if (continuous && hasStarted) {
       const timer = setTimeout(() => {
         const interval = setInterval(() => {
-          setCurrentValue(prev => {
-            const newValue = prev + 1
-            const displayValue = newValue.toLocaleString()
-            setCount(displayValue)
-            return newValue
-          })
+          const newValue = currentValueRef.current + 1
+          currentValueRef.current = newValue
+          const displayValue = newValue.toLocaleString()
+          setCount(displayValue)
         }, incrementRate)
         
         return () => clearInterval(interval)
