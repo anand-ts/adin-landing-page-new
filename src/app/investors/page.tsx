@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from "react";
+import Image from 'next/image';
 import InvestorHero from "@/components/investors/InvestorHero";
 import BeMoreThanInvestor from "@/components/investors/BeMoreThanInvestor";
 import MachineIntelligence from "@/components/investors/MachineIntelligence";
@@ -71,98 +72,33 @@ export default function InvestorsPage() {
               {/* Left Column - Hero Content */}
               <InvestorHero />
               
-              {/* Right Column - CSS Component */}
-              <div className="flex justify-center lg:justify-end">
+              {/* Right Column - SVG Images */}
+              <div className="relative flex justify-center lg:justify-end">
                 <motion.div
-                  className="relative max-w-md w-full"
+                  className="relative w-full max-w-lg h-96"
                   initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
                   animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
                   transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
                 >
-                  {/* Voting Interface Dashboard */}
-                  <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
-                    {/* Header with Lane AI Progress */}
-                    <div className="relative bg-gray-800 rounded-xl p-4 mb-6 text-white">
-                      <div className="flex items-center justify-between mb-2">
-                        <div className="bg-yellow-400 text-black text-xs px-2 py-1 rounded font-medium">
-                          100%
-                        </div>
-                        <button className="text-gray-300 hover:text-white transition-colors">
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                          </svg>
-                        </button>
-                      </div>
-                      <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white font-medium text-sm">
-                          L
-                        </div>
-                        <div>
-                          <h3 className="font-medium">Lane AI</h3>
-                          <p className="text-gray-300 text-sm">Machine Learning</p>
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Voting Options */}
-                    <div className="space-y-3">
-                      {/* Scribe - For */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-gray-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
-                            S
-                          </div>
-                          <span className="font-medium text-gray-900">Scribe</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm text-gray-600">For</span>
-                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Lane AI - For */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-medium text-sm">
-                            L
-                          </div>
-                          <span className="font-medium text-gray-900">Lane AI</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm text-gray-600">For</span>
-                          <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Sona - Against */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border border-gray-100">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-8 h-8 bg-black rounded-full flex items-center justify-center text-white font-medium text-sm">
-                            S
-                          </div>
-                          <span className="font-medium text-gray-900">Sona</span>
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <span className="text-sm text-gray-600">Against</span>
-                          <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                            <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                  {/* Lane AI Card - Background */}
+                  <div className="absolute top-0 left-0 w-72 h-52 z-10">
+                    <Image 
+                      src="/investors_hero_lane.svg" 
+                      alt="Lane AI Logistics"
+                      fill
+                      className="object-contain"
+                    />
                   </div>
-                  {/* LED Overlay Effect */}
-                  <div className="absolute inset-0 border-2 border-purple-400 rounded-2xl shadow-lg shadow-purple-400/30 pointer-events-none"></div>
+                  
+                  {/* Voting Interface - Overlapping from right edge */}
+                  <div className="absolute top-20 right-0 w-64 h-72 z-20">
+                    <Image 
+                      src="/investors_hero_votes.svg" 
+                      alt="Investor Voting Interface"
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
                 </motion.div>
               </div>
             </div>
