@@ -4,7 +4,23 @@ import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const AnimatedText = () => {
-  const words = ['biotech', 'creative tools', 'blockchain']
+  const words = [
+    'biotech', 
+    'creative tools', 
+    'blockchain', 
+    'AI/ML',
+    'fintech',
+    'medtech',
+    'cleantech',
+    'robotics',
+    'cybersecurity',
+    'SaaS',
+    'Web3',
+    'quantum computing',
+    'space tech',
+    'edtech',
+    'digital health'
+  ]
   const [currentWordIndex, setCurrentWordIndex] = useState(0)
 
   useEffect(() => {
