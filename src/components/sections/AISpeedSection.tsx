@@ -1,116 +1,221 @@
+'use client'
+
+import Image from 'next/image'
+import { motion } from 'framer-motion'
+import { useInView } from 'react-intersection-observer'
+import { IoSearch, IoFlash, IoTrendingUp, IoBarChart, IoColorPalette } from 'react-icons/io5'
+
 const AISpeedSection = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+    threshold: 0.1
+  })
+
   const aiAgents = [
     {
       name: "The Value Sleuth",
       description: "Scanning opinions, not the movement.",
-      icon: "🦅",
+      icon: <IoSearch className="w-5 h-5" />,
       color: "bg-orange-100"
     },
     {
-      name: "The Tech Oracle",
+      name: "The Tech Oracle", 
       description: "Predicting tomorrow's breakthroughs, today.",
-      icon: "🔴",
+      icon: <IoFlash className="w-5 h-5" />,
       color: "bg-red-100"
     },
     {
       name: "The Monopoly Maker",
       description: "Spotting the next market dominator.",
-      icon: "💎",
+      icon: <IoTrendingUp className="w-5 h-5" />,
       color: "bg-blue-100"
     },
     {
       name: "The Unit Master",
       description: "Numbers first, growth always.",
-      icon: "📊",
+      icon: <IoBarChart className="w-5 h-5" />,
       color: "bg-green-100"
     },
     {
       name: "The Eddie Guy",
       description: "Seeking those gems for lasting growth.",
-      icon: "💜",
+      icon: <IoColorPalette className="w-5 h-5" />,
       color: "bg-purple-100"
     }
   ]
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section ref={ref} className="py-24 px-4 sm:px-6 lg:px-8 bg-gray-50">
       <div className="max-w-7xl mx-auto">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - AI Agents */}
-          <div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.h2 
+              className="text-4xl lg:text-5xl font-bold mb-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
               AI speed.
               <br />
               Human judgment.
-            </h2>
+            </motion.h2>
             
-            <p className="text-gray-600 mb-8 text-lg">
+            <motion.p 
+              className="text-gray-600 mb-8 text-lg"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+            >
               ADIN pairs expert operators with intelligent agents to handle the heavy lifting of venture workflows. Faster 
               analysis, tighter feedback loops, and more space for high-conviction bets.
-            </p>
+            </motion.p>
 
             {/* Powered by AI Agents */}
-            <div className="mb-8">
-              <h3 className="text-sm font-semibold text-gray-900 mb-4">Powered by</h3>
-              <h4 className="text-xl font-bold mb-6">AI Agents</h4>
+            <motion.div 
+              className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+            >
+              <div className="flex items-center space-x-3 mb-6">
+                <Image
+                  src="/adin-logo-56x56.webp"
+                  alt="ADIN Logo"
+                  width={24}
+                  height={24}
+                  className="w-6 h-6"
+                />
+                <div>
+                  <h3 className="text-sm font-semibold text-gray-900">Powered by</h3>
+                  <h4 className="text-xl font-bold">AI Agents</h4>
+                </div>
+              </div>
               
               <div className="space-y-4">
-                {aiAgents.map((agent) => (
-                  <div key={agent.name} className="flex items-center space-x-4">
-                    <div className={`w-10 h-10 ${agent.color} rounded-lg flex items-center justify-center text-lg`}>
+                {aiAgents.map((agent, index) => (
+                  <motion.div 
+                    key={agent.name} 
+                    className="flex items-center space-x-4 group"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+                    transition={{ duration: 0.8, delay: 0.4 + index * 0.1, ease: "easeOut" }}
+                  >
+                    <div 
+                      className={`w-10 h-10 ${agent.color} rounded-lg flex items-center justify-center text-gray-700 transition-colors duration-300`}
+                    >
                       {agent.icon}
                     </div>
                     <div>
                       <h5 className="font-semibold text-gray-900">{agent.name}</h5>
                       <p className="text-sm text-gray-600">{agent.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Tribute Labs Project */}
-            <div className="flex items-start space-x-3 p-4 bg-white rounded-lg border">
-              <div className="w-6 h-6 bg-pink-500 rounded flex items-center justify-center text-white text-xs font-bold">
-                T
+            <motion.div 
+              className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
+            >
+              <div className="flex items-start space-x-4">
+                <div className="w-10 h-10 bg-pink-500 rounded-xl flex items-center justify-center text-white text-sm font-bold flex-shrink-0">
+                  T
+                </div>
+                <div className="flex-1">
+                  <h5 className="font-semibold text-gray-900 mb-2">A Tribute Labs Project</h5>
+                  <p className="text-sm text-gray-600 leading-relaxed">
+                    Tribute Labs has supported over 70 companies, empowering more than 300 projects through technical
+                    guidance, architecture, and hyperion innovations. Our venture AI systems communicate these KPIs
+                    providing the tools and support they need to scale with confidence.
+                  </p>
+                </div>
               </div>
-              <div className="flex-1">
-                <h5 className="font-semibold text-gray-900">A Tribute Labs Project</h5>
-                <p className="text-sm text-gray-600 mt-1">
-                  Tribute Labs has supported over 70 companies, empowering more than 300 projects through technical
-                  guidance, architecture, and hyperion innovations. Our venture AI systems communicate these KPIs
-                  providing the tools and support they need to scale with confidence.
-                </p>
-              </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Right Column - Human Support */}
-          <div>
-            <div className="mb-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <motion.div 
+              className="mb-8"
+              initial={{ opacity: 0 }}
+              animate={inView ? { opacity: 1 } : { opacity: 0 }}
+              transition={{ duration: 0.3, delay: 0.4 }}
+            >
               <h3 className="text-sm font-semibold text-gray-900 mb-4">Supported by</h3>
               <h4 className="text-xl font-bold mb-6">Humans</h4>
-            </div>
+            </motion.div>
 
-            {/* Team Member Card */}
-            <div className="relative">
-              <div className="bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 rounded-2xl p-8 text-center">
-                <div className="relative inline-block">
-                  <div className="w-48 h-48 bg-gray-300 rounded-lg mx-auto mb-4 overflow-hidden">
-                    {/* Placeholder for team member photo */}
-                    <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center text-white text-2xl font-bold">
-                      RM
+            {/* Team Member Card with Enhanced LED Effect */}
+            <motion.div 
+              className="relative"
+              initial={{ opacity: 0, y: 20 }}
+              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+            >
+              {/* Enhanced LED Ribbon Effect */}
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-green-200 via-blue-200 to-purple-200 p-8 text-center shadow-sm border border-gray-200">
+                {/* Bright LED Ribbon Border */}
+                <div className="absolute inset-0 rounded-2xl border-2 border-blue-400 shadow-lg shadow-blue-400/50"></div>
+                <div className="absolute inset-[2px] rounded-xl bg-gradient-to-br from-green-200 via-blue-200 to-purple-200"></div>
+                
+                {/* Glowing LED Effect */}
+                <motion.div 
+                  className="absolute inset-0 rounded-2xl opacity-30"
+                  style={{
+                    background: 'linear-gradient(90deg, transparent, rgba(59, 130, 246, 1), transparent)',
+                    filter: 'blur(1px)',
+                  }}
+                  animate={{
+                    x: ['-100%', '100%'],
+                  }}
+                  transition={{
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "linear"
+                  }}
+                />
+                
+                {/* Additional Glow Effect */}
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-transparent via-blue-300/20 to-transparent animate-pulse"></div>
+                
+                <div className="relative z-10">
+                  <div className="relative inline-block">
+                    <div 
+                      className="w-48 h-48 bg-gray-300 rounded-lg mx-auto mb-4 overflow-hidden transition-transform duration-300 hover:shadow-lg"
+                    >
+                      {/* Placeholder for team member photo */}
+                      <div className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-500 flex items-center justify-center text-white text-2xl font-bold">
+                        RM
+                      </div>
                     </div>
+                    <motion.div 
+                      className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm shadow-lg"
+                      initial={{ opacity: 0 }}
+                      animate={inView ? { opacity: 1 } : { opacity: 0 }}
+                      transition={{ duration: 0.8, delay: 0.8, ease: "easeOut" }}
+                    >
+                      ✓
+                    </motion.div>
                   </div>
-                  <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm">
-                    ✓
-                  </div>
+                  <h5 className="font-bold text-gray-900 text-lg">Ryan Hoover</h5>
+                  <p className="text-sm text-gray-600">Founder & Product Expert</p>
                 </div>
-                <h5 className="font-bold text-gray-900 text-lg">Ryan Hoover ✅</h5>
-                <p className="text-sm text-gray-600">Founder & Product Expert</p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

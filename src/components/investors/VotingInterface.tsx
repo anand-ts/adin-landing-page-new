@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { IoRocketSharp } from 'react-icons/io5'
 
 const VotingInterface = () => {
   const [votes, setVotes] = useState({
@@ -58,7 +59,7 @@ const VotingInterface = () => {
       <div className="mb-6">
         <div className="flex items-center space-x-3 mb-2">
           <div className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center">
-            <span className="text-sm">🤖</span>
+            <IoRocketSharp className="w-4 h-4 text-white" />
           </div>
           <div>
             <h3 className="font-semibold text-sm">Lane AI</h3>

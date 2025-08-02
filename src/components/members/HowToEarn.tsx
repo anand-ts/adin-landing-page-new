@@ -1,3 +1,5 @@
+import { IoHappyOutline } from 'react-icons/io5'
+
 const HowToEarn = () => {
   return (
     <section className="py-20 px-4 sm:px-6 lg:px-8">
@@ -111,10 +113,10 @@ const HowToEarn = () => {
             </div>
           </div>
 
-          {/* Right Column - Emoji/Visual */}
+          {/* Right Column - Icon Visual */}
           <div className="flex justify-center lg:justify-end">
             <div className="w-80 h-80 bg-gradient-to-br from-yellow-300 to-yellow-400 rounded-3xl flex items-center justify-center shadow-xl">
-              <div className="text-8xl">😊</div>
+              <IoHappyOutline className="text-8xl text-yellow-700" />
             </div>
           </div>
         </div>

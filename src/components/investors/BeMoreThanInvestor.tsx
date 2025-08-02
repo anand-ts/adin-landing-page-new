@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { IoThumbsUpOutline, IoThumbsDownOutline, IoMailOutline, IoFolderOutline, IoTimeOutline } from 'react-icons/io5'
 
 const BeMoreThanInvestor = () => {
   const [email, setEmail] = useState('')
@@ -43,8 +44,14 @@ const BeMoreThanInvestor = () => {
                 </div>
                 
                 <div className="flex space-x-2">
-                  <button className="px-3 py-1 bg-gray-100 rounded text-sm">👍 Agreed</button>
-                  <button className="px-3 py-1 bg-gray-100 rounded text-sm">👎 Dissent</button>
+                  <button className="px-3 py-1 bg-gray-100 rounded text-sm flex items-center space-x-1">
+                    <IoThumbsUpOutline className="w-4 h-4" />
+                    <span>Agreed</span>
+                  </button>
+                  <button className="px-3 py-1 bg-gray-100 rounded text-sm flex items-center space-x-1">
+                    <IoThumbsDownOutline className="w-4 h-4" />
+                    <span>Dissent</span>
+                  </button>
                 </div>
               </div>
             </div>
@@ -124,9 +131,13 @@ const BeMoreThanInvestor = () => {
                 updates on your investments.
               </p>
               
-              <div className="bg-white border rounded-lg p-4 shadow-sm">
+              <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm">
                 <div className="flex items-center justify-between text-sm">
-                  <span>📧 📁 ⏰</span>
+                  <div className="flex items-center space-x-2">
+                    <IoMailOutline className="w-4 h-4 text-gray-600" />
+                    <IoFolderOutline className="w-4 h-4 text-gray-600" />
+                    <IoTimeOutline className="w-4 h-4 text-gray-600" />
+                  </div>
                   <span className="text-gray-500">Wed Jun 19 8</span>
                 </div>
               </div>

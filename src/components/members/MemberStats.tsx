@@ -15,7 +15,7 @@ const MemberStats = () => {
         </div>
 
         {/* Deal Calculator */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 mb-12">
+        <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm mb-12">
           <h3 className="text-lg font-semibold mb-6">Deal Calculator</h3>
           <p className="text-sm text-gray-600 mb-8">
             Calculate how much you could earn based on a potential deal value.

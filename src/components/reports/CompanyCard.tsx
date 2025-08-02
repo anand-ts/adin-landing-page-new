@@ -1,3 +1,6 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 interface CompanyCardProps {
@@ -9,9 +12,11 @@ interface CompanyCardProps {
 
 const CompanyCard = ({ name, description, logo, delay = 0 }: CompanyCardProps) => {
   return (
-    <div 
-      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-all duration-200 animate-fade-in"
-      style={{ animationDelay: `${delay}s` }}
+    <motion.div 
+      className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 transition-all duration-300"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay, ease: "easeOut" }}
     >
       {/* Company Logo */}
       <div className="flex-shrink-0">
@@ -38,9 +43,13 @@ const CompanyCard = ({ name, description, logo, delay = 0 }: CompanyCardProps) =
 
       {/* Status Indicator */}
       <div className="flex-shrink-0">
-        <div className="w-2 h-2 bg-green-500 rounded-full" />
+        <motion.div 
+          className="w-2 h-2 bg-green-500 rounded-full"
+          animate={{ opacity: [1, 0.3, 1] }}
+          transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: delay * 0.5 }}
+        />
       </div>
-    </div>
+    </motion.div>
   )
 }
 

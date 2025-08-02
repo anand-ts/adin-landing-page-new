@@ -1,8 +1,23 @@
+'use client'
+
+import { motion } from 'framer-motion'
+
 const VideoButton = () => {
   return (
-    <button className="inline-flex items-center space-x-2 bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-6 py-3 rounded-full transition-all duration-200 hover:scale-105 hover:shadow-lg">
+    <motion.button 
+      className="inline-flex items-center space-x-3 bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-8 py-4 rounded-full transition-all duration-300 text-lg"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ 
+        backgroundColor: '#fbbf24',
+        boxShadow: '0 10px 25px rgba(251, 191, 36, 0.3)',
+        transition: { duration: 0.3 }
+      }}
+      whileTap={{ scale: 0.98 }}
+    >
       <svg 
-        className="w-5 h-5" 
+        className="w-6 h-6" 
         fill="currentColor" 
         viewBox="0 0 20 20"
       >
@@ -12,8 +27,10 @@ const VideoButton = () => {
           clipRule="evenodd" 
         />
       </svg>
-      <span>Watch the Video</span>
-    </button>
+      <span>
+        Watch the Video
+      </span>
+    </motion.button>
   )
 }
 

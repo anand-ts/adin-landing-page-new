@@ -26,7 +26,7 @@ const MembersHero = () => {
 
           {/* Right Column - Video Player */}
           <div className="flex justify-center lg:justify-end">
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200 max-w-md w-full">
+            <div className="border border-gray-200 rounded-2xl p-6 bg-white shadow-sm max-w-md w-full">
               {/* Video Player Container */}
               <div className="relative bg-gray-100 rounded-xl overflow-hidden">
                 <div className="aspect-video flex items-center justify-center">
