@@ -3,6 +3,7 @@ import MembersHero from "@/components/members/MembersHero";
 import MemberStats from "@/components/members/MemberStats";
 import BeMoreThanMember from "@/components/members/BeMoreThanMember";
 import HowToEarn from "@/components/members/HowToEarn";
+import HowToEarnCarry from "@/components/members/HowToEarnCarry";
 import MembersFAQ from "@/components/members/MembersFAQ";
 import MembersCTA from "@/components/members/MembersCTA";
 
@@ -71,6 +72,9 @@ export default function MembersPage() {
 
         {/* Be More Than a Member */}
         <BeMoreThanMember />
+
+        {/* How to Earn Your 10% Carry */}
+        <HowToEarnCarry />
 
         {/* FAQ */}
         <MembersFAQ />
