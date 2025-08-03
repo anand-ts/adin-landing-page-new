@@ -1,22 +1,17 @@
-'use client'
-
-import { useEffect } from "react";
 import Image from 'next/image';
 import InvestorHero from "@/components/investors/InvestorHero";
 import BeMoreThanInvestor from "@/components/investors/BeMoreThanInvestor";
 import MachineIntelligence from "@/components/investors/MachineIntelligence";
 import UnifiedFAQ from "@/components/shared/UnifiedFAQ";
 import UnifiedCTA from "@/components/shared/UnifiedCTA";
-import { motion } from "framer-motion";
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Investors - ADIN",
+  description: "AI Will be the Best Investor. ADIN and its agents automate venture, from diligence to making investment decisions, with deals sourced by investors and the ADIN member network.",
+};
 
 export default function InvestorsPage() {
-  useEffect(() => {
-    document.title = "Investors - ADIN";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'AI Will be the Best Investor. ADIN and its agents automate venture, from diligence to making investment decisions, with deals sourced by investors and the ADIN member network.');
-    }
-  }, []);
   return (
     <main className="relative min-h-screen bg-white">
       {/* Enhanced LED Strip Effects */}
@@ -74,12 +69,7 @@ export default function InvestorsPage() {
               
               {/* Right Column - SVG Images */}
               <div className="relative flex justify-center lg:justify-end">
-                <motion.div
-                  className="relative w-full max-w-lg h-96"
-                  initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
-                  animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-                  transition={{ duration: 1.2, delay: 0.4, ease: [0.25, 0.1, 0.25, 1], filter: { duration: 0.9 } }}
-                >
+                <div className="relative w-full max-w-lg h-96">
                   {/* Lane AI Card - Background */}
                   <div className="absolute top-0 left-0 w-72 h-52 z-10">
                     <Image 
@@ -99,7 +89,7 @@ export default function InvestorsPage() {
                       className="object-contain"
                     />
                   </div>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>

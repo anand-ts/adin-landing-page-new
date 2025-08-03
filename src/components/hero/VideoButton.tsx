@@ -1,32 +1,34 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const VideoButton = () => {
+  const handleVideoClick = () => {
+    window.open('https://www.linkedin.com/posts/tributelabs_ai-venturecapital-startups-activity-7354245253735800835-3Xc7?utm_source=share&utm_medium=member_desktop&rcm=ACoAADK1bBEBtMlrwXDJzwgmWJYZydQ3erBwtaY', '_blank')
+  }
+
   return (
     <motion.button 
-      className="inline-flex items-center space-x-3 bg-yellow-400 hover:bg-yellow-500 text-black font-medium px-8 py-4 rounded-full transition-all duration-300 text-lg"
+      className="inline-flex items-center space-x-3 bg-white/20 backdrop-blur-lg border border-white/30 text-gray-900 font-medium px-8 py-4 rounded-full transition-all duration-300 text-lg shadow-lg hover:bg-white/30 hover:border-white/40"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       whileHover={{ 
-        backgroundColor: '#fbbf24',
-        boxShadow: '0 10px 25px rgba(251, 191, 36, 0.3)',
+        scale: 1.05,
+        boxShadow: '0 20px 40px rgba(255, 255, 255, 0.1)',
         transition: { duration: 0.3 }
       }}
       whileTap={{ scale: 0.98 }}
+      onClick={handleVideoClick}
     >
-      <svg 
-        className="w-6 h-6" 
-        fill="currentColor" 
-        viewBox="0 0 20 20"
-      >
-        <path 
-          fillRule="evenodd" 
-          d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" 
-          clipRule="evenodd" 
-        />
-      </svg>
+      <Image 
+        src="/how_to_earn.svg"
+        alt="How to Earn"
+        width={24}
+        height={24}
+        className="w-6 h-6"
+      />
       <span>
         Watch the Video
       </span>

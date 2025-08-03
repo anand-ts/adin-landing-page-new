@@ -1,5 +1,4 @@
 import HeroSection from "@/components/hero/HeroSection";
-import LiveReports from "@/components/reports/LiveReports";
 import NetworkStats from "@/components/sections/NetworkStats";
 import AISpeedSection from "@/components/sections/AISpeedSection";
 import InvestmentPhilosophy from "@/components/sections/InvestmentPhilosophy";
@@ -11,9 +10,6 @@ export default function Home() {
     <main className="relative">
       {/* Hero Section */}
       <HeroSection />
-      
-      {/* Live Reports Sidebar */}
-      <LiveReports />
       
       {/* Network Stats */}
       <NetworkStats />

@@ -43,9 +43,7 @@ export default function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
           >
-            Adin is a next-generation VC firm using AI to speed up deal-flow analysis,
-            <br />
-            focusing on Seed Rounds to Series-A.
+            ADIN backs teams building the future of the internet focusing on Seed Rounds to Series-A
           </motion.p>
 
           {/* CTA Button */}
@@ -99,16 +97,69 @@ export default function HeroSection() {
         }}
       />
       
-      {/* Scroll Indicator */}
+      {/* Scroll Indicator - Modern Arrow Animation */}
       <motion.div 
         className="absolute bottom-16 left-1/2 transform -translate-x-1/2"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.4, ease: "easeInOut" }}
       >
-        <div className="w-6 h-10 border-2 border-gray-400 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-gray-400 rounded-full mt-2 animate-bounce"></div>
-        </div>
+        <motion.div
+          className="flex flex-col items-center space-y-2"
+          animate={{ y: [0, 8, 0] }}
+          transition={{ 
+            duration: 2, 
+            repeat: Infinity, 
+            ease: "easeInOut" 
+          }}
+        >
+          {/* Triple stacked arrows */}
+          <motion.svg 
+            className="w-6 h-6 text-gray-400" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut",
+              delay: 0 
+            }}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+          </motion.svg>
+          <motion.svg 
+            className="w-5 h-5 text-gray-400 -mt-1" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut",
+              delay: 0.3 
+            }}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7" />
+          </motion.svg>
+          <motion.svg 
+            className="w-4 h-4 text-gray-400 -mt-1" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+            animate={{ opacity: [0.3, 1, 0.3] }}
+            transition={{ 
+              duration: 2, 
+              repeat: Infinity, 
+              ease: "easeInOut",
+              delay: 0.6 
+            }}
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7" />
+          </motion.svg>
+        </motion.div>
       </motion.div>
     </section>
   )

@@ -15,7 +15,7 @@ const AISpeedSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <motion.div
-          className="text-center mb-16"
+          className="text-left mb-16 max-w-4xl"
           initial={{ opacity: 0 }}
           animate={inView ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
@@ -26,7 +26,7 @@ const AISpeedSection = () => {
             Human judgment.
           </h2>
           
-          <p className="text-gray-600 mb-8 text-lg leading-relaxed max-w-3xl mx-auto">
+          <p className="text-gray-600 mb-8 text-lg leading-relaxed">
             ADIN pairs expert operators with intelligent agents to handle the heavy lifting of venture workflows. Faster 
             analysis, tighter feedback loops, and more space for high-conviction bets.
           </p>

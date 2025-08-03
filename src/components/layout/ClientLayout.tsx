@@ -13,7 +13,7 @@ const ClientLayout = ({ children }: ClientLayoutProps) => {
   const pathname = usePathname()
 
   return (
-    <AnimatePresence mode="wait" initial={true}>
+    <AnimatePresence mode="wait">
       <PageTransition key={pathname}>
         {children}
       </PageTransition>
