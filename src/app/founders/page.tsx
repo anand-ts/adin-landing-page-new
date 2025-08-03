@@ -69,15 +69,6 @@ export default function FoundersPage() {
 
         {/* CTA */}
         <UnifiedCTA />
-
-        {/* Scroll Indicator */}
-        <div className="flex justify-center pb-8">
-          <div className="w-8 h-8 border border-gray-400 rounded-full flex items-center justify-center hover:border-gray-600 transition-colors duration-300">
-            <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-            </svg>
-          </div>
-        </div>
       </div>
     </main>
   );

@@ -15,7 +15,7 @@ const pageVariants = {
     opacity: 1
   },
   out: {
-    opacity: 0
+    opacity: 1
   }
 }
 
