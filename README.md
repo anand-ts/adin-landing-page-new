@@ -1,67 +1,84 @@
-# Adin.online Landing Page
+# adin-landing
 
-A modern, responsive landing page for adin.online built with Next.js, TypeScript, and Tailwind CSS.
+![adin_page](/public/adin_page.png)
 
-## 🚀 Tech Stack
+## Project Summary
 
-- **Next.js 15** - React framework with App Router
-- **TypeScript** - Type-safe development
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **ESLint** - Code linting and formatting
+Landing page for ADIN platform. Built with Next.js and modern web technologies, featuring investor onboarding, member engagement, and founder resources.
 
-## 🏁 Getting Started
+Next.js + Tailwind
 
-### Prerequisites
+## Key Features
 
-- Node.js 18+ 
-- npm, yarn, pnpm, or bun
+- **Multi-page Architecture** - Separate pages for investors, members, and founders
+- **Responsive Design** - Mobile-first approach with Tailwind CSS
+- **Interactive Components** - FAQ sections, stats displays, and CTA elements
+- **Real-time Reports** - Live investment data visualization
+- **Smooth Animations** - Framer Motion for component transitions
 
-### Development
+## Tech Stack
 
-1. Install dependencies:
-```bash
-npm install
-```
+### **Frontend**
+- **Next.js 15**
+- **TypeScript**
+- **Tailwind CSS 4**
+- **Framer Motion**
 
-2. Run the development server:
-```bash
-npm run dev
-```
+### **Development**
+- **ESLint**
+- **PostCSS**
 
-3. Open [http://localhost:3000](http://localhost:3000) to view the app
-
-The page auto-updates as you edit files in the `src/` directory.
-
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
-├── app/              # App Router pages and layouts
-│   ├── layout.tsx    # Root layout
-│   ├── page.tsx      # Homepage
-│   └── globals.css   # Global styles
-├── components/       # Reusable components
-└── lib/             # Utilities and configurations
+├── app/                    # App Router pages
+│   ├── layout.tsx         # Root layout
+│   ├── page.tsx           # Homepage
+│   ├── globals.css        # Global styles
+│   ├── about/             # About page
+│   ├── founders/          # Founders page
+│   ├── investors/         # Investors page
+│   └── members/           # Members page
+├── components/            # Reusable components
+│   ├── founders/          # Founders-specific components
+│   ├── hero/              # Hero section components
+│   ├── investors/         # Investors-specific components
+│   ├── layout/            # Layout components
+│   ├── members/           # Members-specific components
+│   ├── reports/           # Reports components
+│   └── sections/          # Shared section components
+├── lib/                   # Utilities and constants
+│   ├── constants.ts       # App constants
+│   └── utils.ts           # Utility functions
+public/                    # Static assets
+├── adin_wordmark.svg      # Logo files
+├── adin-logo-56x56.webp   # Favicon
+└── ...                    # Other assets
 ```
 
-## 🎨 Design System
+## Usage
 
-- **Responsive Design** - Mobile-first approach
-- **Accessibility** - WCAG 2.1 AA compliance
-- **Performance** - Optimized images and Core Web Vitals
-- **Modern UI** - Clean, contemporary design with smooth animations
+### **Getting Started**
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/anand-ts/adin-landing-page-new.git
+   cd adin-landing
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run in development mode**
+   ```bash
+   npm run dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Build for production**
+   ```bash
+   npm run build
+   npm start
+   ```
